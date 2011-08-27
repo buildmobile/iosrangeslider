@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201FAEAA14087B2E00021322 /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA214087B2E00021322 /* DCCrossHairView.m */; };
+		201FAEAB14087B2E00021322 /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA414087B2E00021322 /* DCFrameView.m */; };
+		201FAEAC14087B2E00021322 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA614087B2E00021322 /* DCIntrospect.m */; };
+		201FAEAD14087B2E00021322 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA914087B2E00021322 /* DCStatusBarOverlay.m */; };
+		201FAEB014087B8F00021322 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201FAEAF14087B8F00021322 /* QuartzCore.framework */; };
 		20E0A25413EB77310074762C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25313EB77310074762C /* UIKit.framework */; };
 		20E0A25613EB77310074762C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25513EB77310074762C /* Foundation.framework */; };
 		20E0A25813EB77310074762C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25713EB77310074762C /* CoreGraphics.framework */; };
@@ -24,6 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201FAEA114087B2E00021322 /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		201FAEA214087B2E00021322 /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		201FAEA314087B2E00021322 /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		201FAEA414087B2E00021322 /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		201FAEA514087B2E00021322 /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		201FAEA614087B2E00021322 /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		201FAEA714087B2E00021322 /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		201FAEA814087B2E00021322 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		201FAEA914087B2E00021322 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		201FAEAF14087B8F00021322 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		20E0A24F13EB77310074762C /* RangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E0A25313EB77310074762C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20E0A25513EB77310074762C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201FAEB014087B8F00021322 /* QuartzCore.framework in Frameworks */,
 				20E0A25413EB77310074762C /* UIKit.framework in Frameworks */,
 				20E0A25613EB77310074762C /* Foundation.framework in Frameworks */,
 				20E0A25813EB77310074762C /* CoreGraphics.framework in Frameworks */,
@@ -60,9 +76,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201FAEA014087B2E00021322 /* DCIntrospect */ = {
+			isa = PBXGroup;
+			children = (
+				201FAEA114087B2E00021322 /* DCCrossHairView.h */,
+				201FAEA214087B2E00021322 /* DCCrossHairView.m */,
+				201FAEA314087B2E00021322 /* DCFrameView.h */,
+				201FAEA414087B2E00021322 /* DCFrameView.m */,
+				201FAEA514087B2E00021322 /* DCIntrospect.h */,
+				201FAEA614087B2E00021322 /* DCIntrospect.m */,
+				201FAEA714087B2E00021322 /* DCIntrospectSettings.h */,
+				201FAEA814087B2E00021322 /* DCStatusBarOverlay.h */,
+				201FAEA914087B2E00021322 /* DCStatusBarOverlay.m */,
+			);
+			path = DCIntrospect;
+			sourceTree = "<group>";
+		};
 		20E0A24413EB77310074762C = {
 			isa = PBXGroup;
 			children = (
+				201FAEAF14087B8F00021322 /* QuartzCore.framework */,
 				20E0A25913EB77310074762C /* RangeSlider */,
 				20E0A25213EB77310074762C /* Frameworks */,
 				20E0A25013EB77310074762C /* Products */,
@@ -90,6 +123,7 @@
 		20E0A25913EB77310074762C /* RangeSlider */ = {
 			isa = PBXGroup;
 			children = (
+				201FAEA014087B2E00021322 /* DCIntrospect */,
 				20E0A27313EB774C0074762C /* Images */,
 				20E0A26213EB77310074762C /* RangeSliderAppDelegate.h */,
 				20E0A26313EB77310074762C /* RangeSliderAppDelegate.m */,
@@ -194,6 +228,10 @@
 				20E0A26413EB77310074762C /* RangeSliderAppDelegate.m in Sources */,
 				20E0A26A13EB77310074762C /* RootViewController.m in Sources */,
 				20E0A27E13EB78FE0074762C /* RangeSlider.m in Sources */,
+				201FAEAA14087B2E00021322 /* DCCrossHairView.m in Sources */,
+				201FAEAB14087B2E00021322 /* DCFrameView.m in Sources */,
+				201FAEAC14087B2E00021322 /* DCIntrospect.m in Sources */,
+				201FAEAD14087B2E00021322 /* DCStatusBarOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +349,7 @@
 				20E0A27213EB77310074762C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

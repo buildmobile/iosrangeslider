@@ -66,17 +66,25 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    // Configure the cell.
-    RangeSlider *slider=  [RangeSlider alloc];
-    slider.minimumValue = 1;
-    slider.selectedMinimumValue = 2;
-    slider.maximumValue = 10;
-    slider.selectedMaximumValue = 8;
-    slider.minimumRange = 2;
+
+        // Configure the cell.
+        RangeSlider *slider=  [RangeSlider alloc];
+        slider.minimumValue = 1;
+        slider.selectedMinimumValue = 2;
+        slider.maximumValue = 10;
+        slider.selectedMaximumValue = 8;
+        slider.minimumRange = 2;
+        [slider addTarget:self action:@selector(updateRangeLabel:) forControlEvents:UIControlEventValueChanged];
+
+        [slider initWithFrame:cell.bounds];
+        
+        [cell addSubview:slider];
     
-    [slider initWithFrame:cell.bounds];
-    [cell addSubview:slider];
     return cell;
+}
+
+-(void)updateRangeLabel:(RangeSlider *)sender{
+    NSLog(@"Slider Range: %f - %f", sender.selectedMinimumValue, sender.selectedMaximumValue);
 }
 
 /*

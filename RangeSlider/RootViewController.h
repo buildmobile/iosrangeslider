@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RangeSlider.h"
 
-@interface RootViewController : UITableViewController
+@interface RootViewController : UITableViewController{
+    NSString * _sliderRangeText;
+}
+
+-(void)updateRangeLabel:(RangeSlider *)sender;
 
 @end

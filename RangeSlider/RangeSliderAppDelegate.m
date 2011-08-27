@@ -7,6 +7,8 @@
 //
 
 #import "RangeSliderAppDelegate.h"
+#import "DCIntrospect.h"
+
 
 @implementation RangeSliderAppDelegate
 
@@ -19,6 +21,10 @@
     // Add the navigation controller's view to the window and display.
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    // always call after makeKeyAndDisplay.
+    #ifdef TARGET_IPHONE_SIMULATOR
+        [[DCIntrospect sharedIntrospector] start];
+    #endif
     return YES;
 }
 
