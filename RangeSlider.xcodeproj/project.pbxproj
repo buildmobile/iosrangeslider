@@ -16,6 +16,11 @@
 		20E0A26713EB77310074762C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A26513EB77310074762C /* MainWindow.xib */; };
 		20E0A26A13EB77310074762C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E0A26913EB77310074762C /* RootViewController.m */; };
 		20E0A26D13EB77310074762C /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A26B13EB77310074762C /* RootViewController.xib */; };
+		20E0A27813EB774C0074762C /* bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A27413EB774C0074762C /* bar-background.png */; };
+		20E0A27913EB774C0074762C /* bar-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A27513EB774C0074762C /* bar-highlight.png */; };
+		20E0A27A13EB774C0074762C /* handle-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A27613EB774C0074762C /* handle-hover.png */; };
+		20E0A27B13EB774C0074762C /* handle.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E0A27713EB774C0074762C /* handle.png */; };
+		20E0A27E13EB78FE0074762C /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E0A27D13EB78FE0074762C /* RangeSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +28,22 @@
 		20E0A25313EB77310074762C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20E0A25513EB77310074762C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20E0A25713EB77310074762C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		20E0A25B13EB77310074762C /* RangeSlider-Info.plist */ = {isa = PBXFileReference; path = "RangeSlider-Info.plist"; sourceTree = "<group>"; };
+		20E0A25B13EB77310074762C /* RangeSlider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RangeSlider-Info.plist"; sourceTree = "<group>"; };
 		20E0A25D13EB77310074762C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20E0A25F13EB77310074762C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		20E0A26113EB77310074762C /* RangeSlider-Prefix.pch */ = {isa = PBXFileReference; path = "RangeSlider-Prefix.pch"; sourceTree = "<group>"; };
-		20E0A26213EB77310074762C /* RangeSliderAppDelegate.h */ = {isa = PBXFileReference; path = RangeSliderAppDelegate.h; sourceTree = "<group>"; };
+		20E0A26113EB77310074762C /* RangeSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RangeSlider-Prefix.pch"; sourceTree = "<group>"; };
+		20E0A26213EB77310074762C /* RangeSliderAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeSliderAppDelegate.h; sourceTree = "<group>"; };
 		20E0A26313EB77310074762C /* RangeSliderAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RangeSliderAppDelegate.m; sourceTree = "<group>"; };
 		20E0A26613EB77310074762C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		20E0A26813EB77310074762C /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		20E0A26813EB77310074762C /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		20E0A26913EB77310074762C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		20E0A26C13EB77310074762C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		20E0A27413EB774C0074762C /* bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-background.png"; sourceTree = "<group>"; };
+		20E0A27513EB774C0074762C /* bar-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-highlight.png"; sourceTree = "<group>"; };
+		20E0A27613EB774C0074762C /* handle-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle-hover.png"; sourceTree = "<group>"; };
+		20E0A27713EB774C0074762C /* handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handle.png; sourceTree = "<group>"; };
+		20E0A27C13EB78FE0074762C /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
+		20E0A27D13EB78FE0074762C /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +90,14 @@
 		20E0A25913EB77310074762C /* RangeSlider */ = {
 			isa = PBXGroup;
 			children = (
+				20E0A27313EB774C0074762C /* Images */,
 				20E0A26213EB77310074762C /* RangeSliderAppDelegate.h */,
 				20E0A26313EB77310074762C /* RangeSliderAppDelegate.m */,
 				20E0A26513EB77310074762C /* MainWindow.xib */,
 				20E0A26813EB77310074762C /* RootViewController.h */,
 				20E0A26913EB77310074762C /* RootViewController.m */,
+				20E0A27C13EB78FE0074762C /* RangeSlider.h */,
+				20E0A27D13EB78FE0074762C /* RangeSlider.m */,
 				20E0A26B13EB77310074762C /* RootViewController.xib */,
 				20E0A25A13EB77310074762C /* Supporting Files */,
 			);
@@ -99,6 +113,17 @@
 				20E0A26113EB77310074762C /* RangeSlider-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20E0A27313EB774C0074762C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				20E0A27413EB774C0074762C /* bar-background.png */,
+				20E0A27513EB774C0074762C /* bar-highlight.png */,
+				20E0A27613EB774C0074762C /* handle-hover.png */,
+				20E0A27713EB774C0074762C /* handle.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +176,10 @@
 				20E0A25E13EB77310074762C /* InfoPlist.strings in Resources */,
 				20E0A26713EB77310074762C /* MainWindow.xib in Resources */,
 				20E0A26D13EB77310074762C /* RootViewController.xib in Resources */,
+				20E0A27813EB774C0074762C /* bar-background.png in Resources */,
+				20E0A27913EB774C0074762C /* bar-highlight.png in Resources */,
+				20E0A27A13EB774C0074762C /* handle-hover.png in Resources */,
+				20E0A27B13EB774C0074762C /* handle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +193,7 @@
 				20E0A26013EB77310074762C /* main.m in Sources */,
 				20E0A26413EB77310074762C /* RangeSliderAppDelegate.m in Sources */,
 				20E0A26A13EB77310074762C /* RootViewController.m in Sources */,
+				20E0A27E13EB78FE0074762C /* RangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

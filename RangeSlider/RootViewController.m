@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "RangeSlider.h"
 
 @implementation RootViewController
 
@@ -52,7 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
 
 // Customize the appearance of table view cells.
@@ -66,6 +67,15 @@
     }
 
     // Configure the cell.
+    RangeSlider *slider=  [RangeSlider alloc];
+    slider.minimumValue = 1;
+    slider.selectedMinimumValue = 2;
+    slider.maximumValue = 10;
+    slider.selectedMaximumValue = 8;
+    slider.minimumRange = 2;
+    
+    [slider initWithFrame:cell.bounds];
+    [cell addSubview:slider];
     return cell;
 }
 
