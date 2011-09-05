@@ -13,6 +13,6 @@
     NSString * _sliderRangeText;
 }
 
--(void)updateRangeLabel:(RangeSlider *)sender;
+-(void)updateRangeLabel:(RangeSlider *)slider;
 
 @end

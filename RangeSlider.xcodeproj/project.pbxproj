@@ -12,6 +12,10 @@
 		201FAEAC14087B2E00021322 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA614087B2E00021322 /* DCIntrospect.m */; };
 		201FAEAD14087B2E00021322 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 201FAEA914087B2E00021322 /* DCStatusBarOverlay.m */; };
 		201FAEB014087B8F00021322 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201FAEAF14087B8F00021322 /* QuartzCore.framework */; };
+		206533B3140F5D8D00E7DD73 /* bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206533AF140F5D8D00E7DD73 /* bar-background@2x.png */; };
+		206533B4140F5D8D00E7DD73 /* bar-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206533B0140F5D8D00E7DD73 /* bar-highlight@2x.png */; };
+		206533B5140F5D8D00E7DD73 /* handle-hover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206533B1140F5D8D00E7DD73 /* handle-hover@2x.png */; };
+		206533B6140F5D8D00E7DD73 /* handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206533B2140F5D8D00E7DD73 /* handle@2x.png */; };
 		20E0A25413EB77310074762C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25313EB77310074762C /* UIKit.framework */; };
 		20E0A25613EB77310074762C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25513EB77310074762C /* Foundation.framework */; };
 		20E0A25813EB77310074762C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E0A25713EB77310074762C /* CoreGraphics.framework */; };
@@ -39,6 +43,10 @@
 		201FAEA814087B2E00021322 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
 		201FAEA914087B2E00021322 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		201FAEAF14087B8F00021322 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		206533AF140F5D8D00E7DD73 /* bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-background@2x.png"; sourceTree = "<group>"; };
+		206533B0140F5D8D00E7DD73 /* bar-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-highlight@2x.png"; sourceTree = "<group>"; };
+		206533B1140F5D8D00E7DD73 /* handle-hover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle-hover@2x.png"; sourceTree = "<group>"; };
+		206533B2140F5D8D00E7DD73 /* handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle@2x.png"; sourceTree = "<group>"; };
 		20E0A24F13EB77310074762C /* RangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E0A25313EB77310074762C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20E0A25513EB77310074762C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,6 +160,10 @@
 		20E0A27313EB774C0074762C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				206533AF140F5D8D00E7DD73 /* bar-background@2x.png */,
+				206533B0140F5D8D00E7DD73 /* bar-highlight@2x.png */,
+				206533B1140F5D8D00E7DD73 /* handle-hover@2x.png */,
+				206533B2140F5D8D00E7DD73 /* handle@2x.png */,
 				20E0A27413EB774C0074762C /* bar-background.png */,
 				20E0A27513EB774C0074762C /* bar-highlight.png */,
 				20E0A27613EB774C0074762C /* handle-hover.png */,
@@ -214,6 +226,10 @@
 				20E0A27913EB774C0074762C /* bar-highlight.png in Resources */,
 				20E0A27A13EB774C0074762C /* handle-hover.png in Resources */,
 				20E0A27B13EB774C0074762C /* handle.png in Resources */,
+				206533B3140F5D8D00E7DD73 /* bar-background@2x.png in Resources */,
+				206533B4140F5D8D00E7DD73 /* bar-highlight@2x.png in Resources */,
+				206533B5140F5D8D00E7DD73 /* handle-hover@2x.png in Resources */,
+				206533B6140F5D8D00E7DD73 /* handle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

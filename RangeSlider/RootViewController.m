@@ -37,13 +37,13 @@
 	[super viewDidDisappear:animated];
 }
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES; //(interfaceOrientation == UIInterfaceOrientationPortrait);
 }
- */
+ 
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -83,8 +83,8 @@
     return cell;
 }
 
--(void)updateRangeLabel:(RangeSlider *)sender{
-    NSLog(@"Slider Range: %f - %f", sender.selectedMinimumValue, sender.selectedMaximumValue);
+-(void)updateRangeLabel:(RangeSlider *)slider{
+    NSLog(@"Slider Range: %f - %f", slider.selectedMinimumValue, slider.selectedMaximumValue);
 }
 
 /*
