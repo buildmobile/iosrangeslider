@@ -14,6 +14,7 @@
     float minimumRange;
     float selectedMinimumValue;
     float selectedMaximumValue;
+    float distanceFromCenter;
 
     float _padding;
     
