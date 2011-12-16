@@ -69,12 +69,12 @@
     
     CGPoint touchPoint = [touch locationInView:self];
     if(_minThumbOn){
-        _minThumb.center = CGPointMake(MAX([self xForValue:minimumValue],MIN(touchPoint.x, [self xForValue:selectedMaximumValue - minimumRange])), _minThumb.center.y);
+        _minThumb.center = CGPointMake(MAX([self xForValue:minimumValue],MIN(touchPoint.x - distanceFromCenter, [self xForValue:selectedMaximumValue - minimumRange])), _minThumb.center.y);
         selectedMinimumValue = [self valueForX:_minThumb.center.x];
         
     }
     if(_maxThumbOn){
-        _maxThumb.center = CGPointMake(MIN([self xForValue:maximumValue], MAX(touchPoint.x, [self xForValue:selectedMinimumValue + minimumRange])), _maxThumb.center.y);
+        _maxThumb.center = CGPointMake(MIN([self xForValue:maximumValue], MAX(touchPoint.x - distanceFromCenter, [self xForValue:selectedMinimumValue + minimumRange])), _maxThumb.center.y);
         selectedMaximumValue = [self valueForX:_maxThumb.center.x];
     }
     [self updateTrackHighlight];
@@ -86,10 +86,15 @@
 
 -(BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     CGPoint touchPoint = [touch locationInView:self];
+    
     if(CGRectContainsPoint(_minThumb.frame, touchPoint)){
         _minThumbOn = true;
-    }else if(CGRectContainsPoint(_maxThumb.frame, touchPoint)){
+         distanceFromCenter = touchPoint.x - _minThumb.center.x;
+    }
+    else if(CGRectContainsPoint(_maxThumb.frame, touchPoint)){
         _maxThumbOn = true;
+         distanceFromCenter = touchPoint.x - _maxThumb.center.x;
+
     }
     return YES;
 }
