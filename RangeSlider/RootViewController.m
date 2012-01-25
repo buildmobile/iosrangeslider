@@ -68,7 +68,7 @@
 
 
         // Configure the cell.
-        RangeSlider *slider=  [RangeSlider alloc];
+        RangeSlider *slider=  [[RangeSlider alloc] initWithFrame:cell.bounds];
         slider.minimumValue = 1;
         slider.selectedMinimumValue = 2;
         slider.maximumValue = 10;
@@ -76,7 +76,6 @@
         slider.minimumRange = 2;
         [slider addTarget:self action:@selector(updateRangeLabel:) forControlEvents:UIControlEventValueChanged];
 
-        [slider initWithFrame:cell.bounds];
         
         [cell addSubview:slider];
     
