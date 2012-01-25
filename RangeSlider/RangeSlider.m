@@ -22,7 +22,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Set the initial state
         _minThumbOn = false;
         _maxThumbOn = false;
         _padding = 20;
@@ -38,21 +37,31 @@
         _minThumb = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]] autorelease];
         _minThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height);
         _minThumb.contentMode = UIViewContentModeCenter;
-		_minThumb.center = CGPointMake([self xForValue:selectedMinimumValue], self.center.y);
-		[self addSubview:_minThumb];
+        [self addSubview:_minThumb];
         
         _maxThumb = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]] autorelease];
         _maxThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height);
         _maxThumb.contentMode = UIViewContentModeCenter;
-		_maxThumb.center = CGPointMake([self xForValue:selectedMaximumValue], self.center.y);
-		[self addSubview:_maxThumb];
-        NSLog(@"Tapable size %f", _minThumb.bounds.size.width); 
-        [self updateTrackHighlight];
-
+        [self addSubview:_maxThumb];
     }
+    
     return self;
 }
 
+
+-(void)layoutSubviews
+{
+    // Set the initial state
+    _minThumb.center = CGPointMake([self xForValue:selectedMinimumValue], self.center.y);
+    
+    _maxThumb.center = CGPointMake([self xForValue:selectedMaximumValue], self.center.y);
+    
+    
+    NSLog(@"Tapable size %f", _minThumb.bounds.size.width); 
+    [self updateTrackHighlight];
+    
+    
+}
 
 -(float)xForValue:(float)value{
     return (self.frame.size.width-(_padding*2))*((value - minimumValue) / (maximumValue - minimumValue))+_padding;
@@ -78,7 +87,7 @@
         selectedMaximumValue = [self valueForX:_maxThumb.center.x];
     }
     [self updateTrackHighlight];
-    [self setNeedsDisplay];
+    [self setNeedsLayout];
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
     return YES;
@@ -89,12 +98,12 @@
     
     if(CGRectContainsPoint(_minThumb.frame, touchPoint)){
         _minThumbOn = true;
-         distanceFromCenter = touchPoint.x - _minThumb.center.x;
+        distanceFromCenter = touchPoint.x - _minThumb.center.x;
     }
     else if(CGRectContainsPoint(_maxThumb.frame, touchPoint)){
         _maxThumbOn = true;
-         distanceFromCenter = touchPoint.x - _maxThumb.center.x;
-
+        distanceFromCenter = touchPoint.x - _maxThumb.center.x;
+        
     }
     return YES;
 }
@@ -114,12 +123,12 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end
