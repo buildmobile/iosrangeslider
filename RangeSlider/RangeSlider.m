@@ -8,10 +8,27 @@
 
 #import "RangeSlider.h"
 
-@interface RangeSlider (PrivateMethods)
--(float)xForValue:(float)value;
--(float)valueForX:(float)x;
--(void)updateTrackHighlight;
+@interface RangeSlider () {
+    float minimumValue;
+    float maximumValue;
+    float minimumRange;
+    float selectedMinimumValue;
+    float selectedMaximumValue;
+    float distanceFromCenter;
+    
+    float _padding;
+    
+    BOOL _maxThumbOn;
+    BOOL _minThumbOn;
+    
+    UIImageView * _minThumb;
+    UIImageView * _maxThumb;
+    UIImageView * _track;
+    UIImageView * _trackBackground;
+}
+- (float) xForValue:(float)value;
+- (float) valueForX:(float)x;
+- (void) updateTrackHighlight;
 @end
 
 @implementation RangeSlider
@@ -26,20 +43,20 @@
         _maxThumbOn = false;
         _padding = 20;
         
-        _trackBackground = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar-background.png"]] autorelease];
+        _trackBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar-background.png"]];
         _trackBackground.center = self.center;
         [self addSubview:_trackBackground];
         
-        _track = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar-highlight.png"]] autorelease];
+        _track = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar-highlight.png"]];
         _track.center = self.center;
         [self addSubview:_track];
         
-        _minThumb = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]] autorelease];
+        _minThumb = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]];
         _minThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height);
         _minThumb.contentMode = UIViewContentModeCenter;
         [self addSubview:_minThumb];
         
-        _maxThumb = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]] autorelease];
+        _maxThumb = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle-hover.png"]];
         _maxThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height);
         _maxThumb.contentMode = UIViewContentModeCenter;
         [self addSubview:_maxThumb];
@@ -47,7 +64,6 @@
     
     return self;
 }
-
 
 -(void)layoutSubviews
 {

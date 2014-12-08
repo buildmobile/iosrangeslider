@@ -67,17 +67,17 @@
     }
 
 
-        // Configure the cell.
-        RangeSlider *slider=  [[RangeSlider alloc] initWithFrame:cell.bounds];
-        slider.minimumValue = 1;
-        slider.selectedMinimumValue = 2;
-        slider.maximumValue = 10;
-        slider.selectedMaximumValue = 8;
-        slider.minimumRange = 2;
-        [slider addTarget:self action:@selector(updateRangeLabel:) forControlEvents:UIControlEventValueChanged];
+    // Configure the cell.
+    RangeSlider *slider=  [[RangeSlider alloc] initWithFrame:cell.bounds];
+    slider.minimumValue = 1;
+    slider.selectedMinimumValue = 2;
+    slider.maximumValue = 10;
+    slider.selectedMaximumValue = 8;
+    slider.minimumRange = 2;
+    [slider addTarget:self action:@selector(updateRangeLabel:) forControlEvents:UIControlEventValueChanged];
 
-        
-        [cell addSubview:slider];
+    
+    [cell addSubview:slider];
     
     return cell;
 }
